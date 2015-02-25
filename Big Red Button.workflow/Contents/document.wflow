@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>381</string>
+	<string>409.2</string>
 	<key>AMApplicationVersion</key>
-	<string>2.4</string>
+	<string>2.5</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>-- Not sure why this is needed but it makes the script way more reliabledelay (0.25)-- Get the name of the front most appset front_app to (path to frontmost application as Unicode text)set AppleScript's text item delimiters to ":"set front_app to front_app's text itemsset AppleScript's text item delimiters to {""} --&gt; restore delimiters to default valueset item_num to (count of front_app) - 1set app_name to item item_num of front_appset AppleScript's text item delimiters to "."set app_name to app_name's text itemsset AppleScript's text item delimiters to {""} --&gt; restore delimiters to default valueset front_app_name to item 1 of app_name-- Perform certain actions based on which app is activeif front_app_name is "Xcode" then	tell application "System Events"		keystroke "u" using command down	end tellend if</string>
+					<string>-- Not sure why this is needed but it makes the script way more reliabledelay (0.25)-- Get the name of the front most appset front_app to (path to frontmost application as Unicode text)set AppleScript's text item delimiters to ":"set front_app to front_app's text itemsset AppleScript's text item delimiters to {""} --&gt; restore delimiters to default valueset item_num to (count of front_app) - 1set app_name to item item_num of front_appset AppleScript's text item delimiters to "."set app_name to app_name's text itemsset AppleScript's text item delimiters to {""} --&gt; restore delimiters to default valueset front_app_name to item 1 of app_name-- Perform certain actions based on which app is activeif front_app_name contains "Xcode" then	tell application "System Events"		keystroke "u" using command down	end tellelse if front_app_name is "iTunes" then	tell application "iTunes"		playpause	end tellend if</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,9 +105,9 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:498.000000</string>
+				<string>388.000000:316.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -117,6 +117,10 @@ end run</string>
 	<dict/>
 	<key>workflowMetaData</key>
 	<dict>
+		<key>serviceApplicationBundleID</key>
+		<string></string>
+		<key>serviceApplicationPath</key>
+		<string></string>
 		<key>serviceInputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceOutputTypeIdentifier</key>
